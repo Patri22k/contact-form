@@ -44,9 +44,9 @@ const RadioSelected = ({ selectedRadio, setSelectedRadio, radioError, setRadioEr
                                 display: 'inline-block',
                                 width: '18px',
                                 height: '18px',
-                                border: '1px solid #000',
                                 borderRadius: '100%'
                             }}
+                            className="border"
                         />
                     )}
                     <p className='ml-3'>General Enquiry</p>
@@ -80,9 +80,9 @@ const RadioSelected = ({ selectedRadio, setSelectedRadio, radioError, setRadioEr
                                 display: 'inline-block',
                                 width: '18px',
                                 height: '18px',
-                                border: '1px solid #000',
                                 borderRadius: '100%'
                             }}
+                            className="border"
                         />
                     )}
                     <p className="ml-3">Support Request</p>
