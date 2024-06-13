@@ -58,5 +58,28 @@ input {
 }
 
 @media screen and (max-width: 344px) {
-  
+  .inside-div {
+      margin-top: 4rem;
+      width: 90%;
+    }
+
+  .title {
+    margin-top: 1rem;
+  }
+
+  .submit-div {
+    margin-top: 1.75rem;
+  }
+}
+
+@media screen and (min-width: 355px) and (max-width: 412px) {
+  .inside-div {
+    margin-top: 3.5rem;
+    width: 90%;
+    height: 100%;
+  }
+
+  .attribution {
+    height: 5%;
+  }
 }

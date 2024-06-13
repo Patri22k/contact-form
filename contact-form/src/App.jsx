@@ -81,10 +81,10 @@ function App() {
   return (
     <div className='wrapper'>
       <SuccessfulMessage show={showSuccessMsg} />
-      <div className='body bg-white text-gray-900 h-[90vh] w-[90%] mt-10 md:w-1/2 mx-auto rounded-2xl'>
-        <h1 className='title mx-10 mt-4 text-4xl font-semibold text-[#2B4246]'>Contact Us</h1>
-        <form onSubmit={handleSubmit} className='body-form text-sm md:text-sm mx-10 mb-5' noValidate>
-          <div className='names mt-3 xl:flex xl:flex-row xl:gap-3'>
+      <div className='inside-div bg-white text-gray-900 mx-auto rounded-2xl md:w-1/2'>
+        <h1 className='title mx-10 text-4xl font-semibold text-[#2B4246]'>Contact Us</h1>
+        <form onSubmit={handleSubmit} className='body-form text-sm md:text-sm mx-10' noValidate>
+          <div className='names xl:flex xl:flex-row xl:gap-3'>
             <label className='flex flex-col xl:w-1/2'>
               <span className='my-2'>First Name <span className='text-green-600'>*</span></span>
               <input
@@ -125,7 +125,7 @@ function App() {
               </span>
             </label>
           </div>
-          <div className='querq-div'>
+          <div className='query-div'>
             <label className='flex flex-col mt-3'>
               <span className='mb-2'>Query Type <span className='text-green-600'>*</span></span>
               <RadioSelected selectedRadio={selectedRadio} setSelectedRadio={setSelectedRadio} radioError={radioError} setRadioError={setRadioError} />
@@ -136,7 +136,7 @@ function App() {
           </div>
           <div className='message-div'>
             <label className='flex flex-col'>
-              <span className='mb-2'>Message <span className='text-green-600'>*</span></span>
+              <span className='my-2'>Message <span className='text-green-600'>*</span></span>
               <textarea
                 className={`h-24 rounded-md resize-none p-5 overflow-y-visible ${textareaError ? 'border-red-600' : ''}`}
                 value={textarea}

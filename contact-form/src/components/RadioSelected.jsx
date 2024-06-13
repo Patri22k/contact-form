@@ -15,7 +15,7 @@ const RadioSelected = ({ selectedRadio, setSelectedRadio, radioError, setRadioEr
     };
 
     return (
-        <div className='flex flex-col xl:flex-row gap-5'>
+        <div className='flex flex-col xl:flex-row gap-3'>
             <div 
                 className="border-2 rounded-md flex items-center h-10 xl:w-1/2 px-5 hover:border-[#0C7D69]"
                 style={{ 
