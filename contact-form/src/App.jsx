@@ -81,12 +81,12 @@ function App() {
   return (
     <div className='wrapper'>
       <SuccessfulMessage show={showSuccessMsg} />
-      <div className='bg-white text-gray-900 w-[90%] h-[90%] md:w-1/2 md:h-[70%] m-auto rounded-2xl'>
-        <h1 className='mx-10 mt-10 text-4xl font-bold'>Contact Us</h1>
-        <form onSubmit={handleSubmit} className='text-xs md:text-sm mx-10' noValidate>
-          <div className='flex flex-row gap-3 mt-3'>
-            <label className='flex flex-col w-1/2'>
-              First Name
+      <div className='bg-white text-gray-900 h-[90vh] w-[90%] mt-10 md:w-1/2 mx-auto rounded-2xl'>
+        <h1 className='mx-10 mt-4 text-4xl font-semibold text-[#2B4246]'>Contact Us</h1>
+        <form onSubmit={handleSubmit} className='text-sm md:text-sm mx-10 mb-5' noValidate>
+          <div className='mt-3 xl:flex xl:flex-row xl:gap-3'>
+            <label className='flex flex-col xl:w-1/2'>
+              <span className='my-2'>First Name <span className='text-green-600'>*</span></span>
               <input
                 type="text"
                 className={`input-name ${firstNameError ? 'border-red-600' : ''}`}
@@ -97,8 +97,8 @@ function App() {
                 {firstNameError}
               </span>
             </label>
-            <label className='flex flex-col w-1/2'>
-              Last Name
+            <label className='flex flex-col xl:w-1/2'>
+              <span className='my-2'>Last Name <span className='text-green-600'>*</span></span>
               <input
                 type="text"
                 className={`input-name ${lastNameError ? 'border-red-600' : ''}`}
@@ -112,7 +112,7 @@ function App() {
           </div>
           <div>
             <label className='flex flex-col mt-3'>
-              Email Address
+              <span className='mb-2'>Email Address <span className='text-green-600'>*</span></span>
               <input
                 type="email"
                 name="email"
@@ -127,7 +127,7 @@ function App() {
           </div>
           <div>
             <label className='flex flex-col mt-3'>
-              Query Type
+              <span className='mb-2'>Query Type <span className='text-green-600'>*</span></span>
               <RadioSelected selectedRadio={selectedRadio} setSelectedRadio={setSelectedRadio} radioError={radioError} setRadioError={setRadioError} />
               <span className={`text-red-600 h-5 ${radioError ? 'visible' : 'invisible'}`}>
                 {radioError}
@@ -135,8 +135,8 @@ function App() {
             </label>
           </div>
           <div>
-            <label className='flex flex-col mt-3'>
-              Message
+            <label className='flex flex-col'>
+              <span className='mb-2'>Message <span className='text-green-600'>*</span></span>
               <textarea
                 className={`h-24 rounded-md resize-none p-5 overflow-y-visible ${textareaError ? 'border-red-600' : ''}`}
                 value={textarea}
@@ -154,7 +154,7 @@ function App() {
               {checkboxError}
             </span>
           </div>
-          <div>
+          <div className='mt-10'>
             <label>
               <input
                 type="submit"
@@ -166,8 +166,10 @@ function App() {
         </form>
       </div>
       <footer className="attribution">
-        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target='_blank'>Frontend Mentor</a>.
-        Coded by <a href="https://github.com/Patri22k" target='_blank'>Patrik Bajzík</a>.
+        <span>
+          Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target='_blank'>Frontend Mentor</a>.
+          Coded by <a href="https://github.com/Patri22k" target='_blank'>Patrik Bajzík</a>.
+        </span>
       </footer>
     </div>
   )

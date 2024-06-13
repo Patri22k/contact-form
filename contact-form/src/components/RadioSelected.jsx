@@ -15,9 +15,9 @@ const RadioSelected = ({ selectedRadio, setSelectedRadio, radioError, setRadioEr
     };
 
     return (
-        <div className='flex gap-5 h-10'>
+        <div className='flex flex-col xl:flex-row gap-5'>
             <div 
-                className="border-2 rounded-md flex items-center w-1/2 px-5 hover:border-[#0C7D69]"
+                className="border-2 rounded-md flex items-center h-10 xl:w-1/2 px-5 hover:border-[#0C7D69]"
                 style={{ 
                     borderColor: selectedRadio === "radio1" ? 'hsl(169, 82%, 27%)' : '', 
                     backgroundColor: selectedRadio === "radio1" ? 'hsl(148, 38%, 91%)' : ''
@@ -53,7 +53,7 @@ const RadioSelected = ({ selectedRadio, setSelectedRadio, radioError, setRadioEr
                 </label>
             </div>
             <div 
-                className="border-2 rounded-md flex items-center w-1/2 px-5 hover:border-[#0C7D69]"
+                className="border-2 rounded-md flex items-center h-10 xl:w-1/2 px-5 hover:border-[#0C7D69]"
                 style={{
                     borderColor: selectedRadio === "radio2" ? 'hsl(169, 82%, 27%)' : '',
                     backgroundColor: selectedRadio === "radio2" ? 'hsl(148, 38%, 91%)' : ''
