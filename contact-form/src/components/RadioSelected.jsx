@@ -35,7 +35,7 @@ const RadioSelected = ({ selectedRadio, setSelectedRadio, radioError, setRadioEr
                 />
                 <label htmlFor="radio1" style={{ cursor: 'pointer', display: 'flex', alignItems: 'center', width: '100%' }}>
                     {selectedRadio === "radio1" ? (
-                        <svg viewBox="0 0 20 21" width="20" height="21">
+                        <svg viewBox="0 0 21 21" width="21" height="21">
                             <path fill="#0C7D69" d="M10 .75a9.75 9.75 0 1 0 9.75 9.75A9.76 9.76 0 0 0 10 .75Zm0 18a8.25 8.25 0 1 1 8.25-8.25A8.26 8.26 0 0 1 10 18.75Zm5.25-8.25a5.25 5.25 0 1 1-10.499 0 5.25 5.25 0 0 1 10.499 0Z" />
                         </svg>
                     ) : (
@@ -71,7 +71,7 @@ const RadioSelected = ({ selectedRadio, setSelectedRadio, radioError, setRadioEr
                 />
                 <label htmlFor="radio2" style={{ cursor: 'pointer', display: 'flex', alignItems: 'center', width: '100%' }}>
                     {selectedRadio === "radio2" ? (
-                        <svg viewBox="0 0 20 21" width="20" height="21">
+                        <svg viewBox="0 0 21 21" width="21" height="21">
                             <path fill="#0C7D69" d="M10 .75a9.75 9.75 0 1 0 9.75 9.75A9.76 9.76 0 0 0 10 .75Zm0 18a8.25 8.25 0 1 1 8.25-8.25A8.26 8.26 0 0 1 10 18.75Zm5.25-8.25a5.25 5.25 0 1 1-10.499 0 5.25 5.25 0 0 1 10.499 0Z" />
                         </svg>
                     ) : (

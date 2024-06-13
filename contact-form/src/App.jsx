@@ -71,13 +71,17 @@ function App() {
 
     if (isValid) {
       setShowSuccessMsg(true);
+    } else {
+      setShowSuccessMsg(false);
     }
   };
 
+  //TODO: make everything responsive
+
   return (
     <div className='wrapper'>
-      {showSuccessMsg && <SuccessfulMessage show={showSuccessMsg} />}
-      <div className='bg-white text-gray-900 w-1/2 h-[70%] m-auto rounded-2xl'>
+      <SuccessfulMessage show={showSuccessMsg} />
+      <div className='bg-white text-gray-900 w-[90%] h-[90%] md:w-1/2 md:h-[70%] m-auto rounded-2xl'>
         <h1 className='mx-10 mt-10 text-4xl font-bold'>Contact Us</h1>
         <form onSubmit={handleSubmit} className='text-xs md:text-sm mx-10' noValidate>
           <div className='flex flex-row gap-3 mt-3'>
@@ -161,6 +165,10 @@ function App() {
           </div>
         </form>
       </div>
+      <footer className="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target='_blank'>Frontend Mentor</a>.
+        Coded by <a href="https://github.com/Patri22k" target='_blank'>Patrik Bajzík</a>.
+      </footer>
     </div>
   )
 }
