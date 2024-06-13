@@ -1,16 +1,23 @@
-import React, { useState } from "react";
+import React from "react";
 
-const RadioSelected = () => {
-    const [selectedRadio, setSelectedRadio] = useState(null);
-
+const RadioSelected = ({ selectedRadio, setSelectedRadio, radioError, setRadioError }) => {
     const handleRadioChanged = (radioId) => {
         setSelectedRadio(radioId);
+        setRadioError('');
+    };
+
+    const handleRadioBlur = () => {
+        if (!radioError) {
+            setRadioError('Please select a query type');
+        } else {
+            setRadioError('');
+        }
     };
 
     return (
-        <div className='flex gap-5 h-12'>
+        <div className='flex gap-5 h-10'>
             <div 
-                className="border rounded-md flex items-center w-1/2 px-5"
+                className="border-2 rounded-md flex items-center w-1/2 px-5 hover:border-[#0C7D69]"
                 style={{ 
                     borderColor: selectedRadio === "radio1" ? 'hsl(169, 82%, 27%)' : '', 
                     backgroundColor: selectedRadio === "radio1" ? 'hsl(148, 38%, 91%)' : ''
@@ -23,6 +30,7 @@ const RadioSelected = () => {
                     className='accent-white'
                     checked={selectedRadio === "radio1"}
                     onChange={() => handleRadioChanged("radio1")}
+                    onBlur={handleRadioBlur}
                     style={{ display: 'none' }}
                 />
                 <label htmlFor="radio1" style={{ cursor: 'pointer', display: 'flex', alignItems: 'center', width: '100%' }}>
@@ -45,7 +53,7 @@ const RadioSelected = () => {
                 </label>
             </div>
             <div 
-                className="border rounded-md flex items-center w-1/2 px-5"
+                className="border-2 rounded-md flex items-center w-1/2 px-5 hover:border-[#0C7D69]"
                 style={{
                     borderColor: selectedRadio === "radio2" ? 'hsl(169, 82%, 27%)' : '',
                     backgroundColor: selectedRadio === "radio2" ? 'hsl(148, 38%, 91%)' : ''
@@ -58,6 +66,7 @@ const RadioSelected = () => {
                     className='accent-white'
                     checked={selectedRadio === "radio2"}
                     onChange={() => handleRadioChanged("radio2")}
+                    onBlur={handleRadioBlur}
                     style={{ display: 'none' }}
                 />
                 <label htmlFor="radio2" style={{ cursor: 'pointer', display: 'flex', alignItems: 'center', width: '100%' }}>

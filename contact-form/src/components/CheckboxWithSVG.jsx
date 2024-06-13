@@ -1,14 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-const CheckboxWithSVG = () => {
-    const [isChecked, setIsChecked] = useState(false);
-
+const CheckboxWithSVG = ({ isChecked, setIsChecked }) => {
     const handleCheckboxChange = () => {
         setIsChecked(!isChecked);
     };
 
     return (
-        <div className='my-7'>
+        <div className='mt-4'>
             <input
                 type="checkbox"
                 name="cb"
@@ -33,7 +31,7 @@ const CheckboxWithSVG = () => {
                         }}
                     />
                 )}
-                <p style={{ marginLeft: '2em' }}>I consent to being contacted by the team</p>
+                <p style={{ marginLeft: '1.5em' }}>I hereby consent to being contacted by the team</p>
             </label>
         </div>
     );
