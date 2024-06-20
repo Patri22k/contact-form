@@ -35,8 +35,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/Patri22k/contact-form)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- [Solution URL](https://www.frontendmentor.io/solutions/react-contact-form-9ljBVYeFA3)
+- [Live Site URL](https://contact-form-rose-nine.vercel.app/)
 
 ## My process
 
