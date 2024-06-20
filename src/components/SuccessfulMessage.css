@@ -1,0 +1,12 @@
+@media (max-width: 639px) {
+    .successful-message {
+        top: 15px;
+        width: 90%;
+    }
+}
+
+@media (min-width: 640px) {
+    .successful-message {
+        width: 70%;
+    }
+}

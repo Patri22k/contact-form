@@ -1,0 +1,23 @@
+/* MIN-HEIGHT: 640px */
+.radio1, .radio2 {
+    height: 2rem;
+    width: 100%;
+}
+
+@media (max-width: 639px) {
+    .radio-div {
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 640px) {
+    .radio-div {
+        flex-direction: row;
+    }
+}
+
+@media (min-width: 1025px) {
+    .radio1, .radio2 {
+        height: 2.5rem;
+    }
+}
